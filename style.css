@@ -1,0 +1,197 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    background-color: #007bff; /* Deep blue color for sidebar */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Makes the sidebar scrollable */
+}
+
+.profile-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container h1 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.profile-container p {
+    font-size: 1em;
+    color: #c9e2ff; /* Lighter blue for the text under the name */
+}
+
+.sidebar-nav {
+    width: 100%;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar-nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.sidebar-nav ul li a:hover {
+    color: #c9e2ff; /* Lighter blue on hover */
+}
+
+/* Main Content Area */
+.content {
+    margin-left: 300px; /* Adjust according to your sidebar width */
+    padding: 20px;
+    width: calc(100% - 300px); /* Take up the remaining space after the sidebar */
+    background-color: #fff; /* Ensure the background is white */
+    max-width: 1000px; /* Optional: Limit the content width to avoid overflow */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Section Styling */
+.section {
+    padding: 40px 20px;
+    text-align: left;
+    background-color: white;
+    margin-bottom: 20px;
+    border-left: 5px solid #007bff; /* Blue left border for sections */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #007bff; /* Blue color for section headers */
+}
+
+/* Sidebar Social Links Styling */
+.sidebar .social-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row; /* Display the logos side by side */
+    justify-content: center; /* Center the logos horizontally */
+    align-items: center; /* Align them vertically (if needed) */
+}
+
+.sidebar .social-links a {
+    margin: 0 10px; /* Adds space between the logos */
+    display: inline-block;
+}
+
+/* Social Media Logos */
+.sidebar .social-links .social-icon {
+    width: 30px; /* Adjust the width of the logos */
+    height: 30px; /* Adjust the height of the logos */
+    border-radius: 50%; /* Ensures circular shape */
+    object-fit: contain; /* Ensures the logo fits the image area */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
+
+/* Contact Section */
+#contact {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .profile-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 1em;
+    }
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%; /* Full width of the content area */
+    max-width: 600px; /* This sets the width of the carousel */
+    height: 350px; /* Sets the height of the carousel */
+    margin: 20px auto;
+    overflow: hidden; /* Hide overflow to keep the image within the bounds */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Carousel Slide (Image Holder) */
+.carousel-slide {
+    display: flex; /* Display images in a row */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.carousel-slide img {
+    width: 100%; /* Ensures the image takes up the full width of the container */
+    height: 100%; /* Ensures the image takes up the full height of the container */
+    object-fit: cover; /* This will crop the image if necessary to fill the space */
+    border-radius: 10px;
+}
+
